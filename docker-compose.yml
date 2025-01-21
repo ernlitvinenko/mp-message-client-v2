@@ -1,0 +1,7 @@
+services:
+  client:
+    image: 10.2.101.91:5000/mp_message:latest
+    build:
+      context: .
+      platforms:
+        - "linux/amd64"

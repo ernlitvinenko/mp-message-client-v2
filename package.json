@@ -9,19 +9,47 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroui/alert": "^2.2.10",
+    "@heroui/checkbox": "^2.3.9",
+    "@heroui/system": "^2.4.7",
+    "@heroui/theme": "^2.4.6",
+    "@nextui-org/avatar": "^2.2.6",
+    "@nextui-org/button": "^2.2.9",
+    "@nextui-org/card": "^2.2.9",
+    "@nextui-org/drawer": "^2.2.7",
+    "@nextui-org/form": "^2.1.8",
+    "@nextui-org/input": "^2.4.8",
+    "@nextui-org/listbox": "^2.3.9",
+    "@nextui-org/modal": "^2.2.7",
+    "@nextui-org/react": "^2.6.11",
+    "@nextui-org/scroll-shadow": "^2.3.5",
+    "@nextui-org/system": "^2.4.6",
+    "@nextui-org/theme": "^2.4.5",
+    "@reactuses/core": "^6.0.1",
+    "antd": "^5.23.1",
+    "axios": "^1.7.9",
+    "axios-cache-adapter": "^2.7.3",
+    "framer-motion": "^11.18.0",
+    "lodash": "^4.17.21",
+    "next": "15.1.4",
+    "nextui-cli": "^0.5.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.1.4"
+    "react-icons": "^5.4.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "socketio": "^1.0.0",
+    "valtio": "^2.1.2"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@eslint/eslintrc": "^3",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
+    "@types/socket.io-client": "^3.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.1.4",
-    "@eslint/eslintrc": "^3"
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
