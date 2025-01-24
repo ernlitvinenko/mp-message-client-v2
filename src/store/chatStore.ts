@@ -1,11 +1,15 @@
 import {proxy} from "valtio/vanilla";
 import ChatService, {ChatData, CreateChatProps, MessageData,} from "@/service/chatService";
 import _ from "lodash";
+import {AuthStore} from "@/store/authStore";
 
+type MessageStoreData = MessageData & {
+    isNew: boolean
+}
 
 type ChatStoreType = {
     chats: ChatData[]
-    messages: MessageData[]
+    messages: MessageStoreData[]
 }
 
 export const ChatStore = proxy<ChatStoreType>({
@@ -34,7 +38,9 @@ export const loadMessages = async (chatId: number, page: number = 1) => {
         if (respList.status !== 200 ) {
             return false
         }
-        ChatStore.messages = [...ChatStore.messages, ...respList.data]
+        ChatStore.messages.length = 0
+        ChatStore.messages = [...ChatStore.messages, ...respList.data.map(e => ({...e, isNew: false}) )
+        ]
         ChatStore.messages = _.sortBy(ChatStore.messages, (o) => -o.id)
     }
     catch (e) {
@@ -77,6 +83,6 @@ export const addMessageViaSocket = (d: MessageData) => {
     if (_.find(ChatStore.messages, (o) => {return o.id == d.id}) != undefined) {
         return
     }
-    ChatStore.messages.push(d)
+    ChatStore.messages.push({...d, isNew: d.sender.id !== AuthStore.user?.id})
     ChatStore.messages = _.sortBy(ChatStore.messages, (o) => -o.id)
 }

@@ -10,7 +10,10 @@
   },
   "dependencies": {
     "@heroui/alert": "^2.2.10",
+    "@heroui/badge": "^2.2.6",
     "@heroui/checkbox": "^2.3.9",
+    "@heroui/dropdown": "^2.3.10",
+    "@heroui/listbox": "^2.3.10",
     "@heroui/system": "^2.4.7",
     "@heroui/theme": "^2.4.6",
     "@nextui-org/avatar": "^2.2.6",
@@ -28,7 +31,6 @@
     "@reactuses/core": "^6.0.1",
     "antd": "^5.23.1",
     "axios": "^1.7.9",
-    "axios-cache-adapter": "^2.7.3",
     "framer-motion": "^11.18.0",
     "lodash": "^4.17.21",
     "next": "15.1.4",

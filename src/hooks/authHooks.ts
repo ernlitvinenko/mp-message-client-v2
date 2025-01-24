@@ -16,10 +16,11 @@ export const useAuth = () => {
             (d) => {
                 if (!d) {
                     router.push("/auth")
+                    return
                 }
             }
         )
 
-    }, []);
+    }, [router]);
 
 }
